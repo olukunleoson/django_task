@@ -20,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-s9+c$yvya^1^q)%pd(td*g=ckl%(kwd(bun7#arih#lh8klymb'
+SECRET_KEY = ('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = ('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -55,9 +55,7 @@ ROOT_URLCONF = 'blogtask.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'template'),
-            ],
+        'DIRS': [r'C:\Users\USER\Documents\zuritask\blogtask\bloghome\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,13 +114,25 @@ USE_L10N = True
 
 USE_TZ = True
 
+#PROJECT_ROOT - os.path.dirname(os.path.abspath(__file__))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+#STATIC_ROOT = os.path.dirname(os.path.abspath(File))
 STATIC_URL = '/static/'
+
+#STATICFILES_DIRS = (
+    #os.path.join(PROJECT_ROOT, 'static'),
+#)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'bloghome:homepage'
+
+LOGOUT_REDIRECT_URL = 'bloghome:homepage'
+
+REGISTER_REDIRECT_URL = 'bloghome:homepage'
