@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div>
+        <div class="post" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Tech news</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content. thetthh dhhtteh nhdfttfth hhfttrhhe hfytfheh hhfggfg hhfttgft hhftgfj jhggfyhhj hhggj
+                </p>
+                <a href="#" class="btn btn-primary">read more</a>
+        
+        
+
+        <div class="post">
+            <div class="date">
+                {{ post.published_date}}
+            </div>
+            <h1><a href="/post">{{ Post.title}}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <a href="{% url 'bloghome:post' %}">Comments: {{ CommentForm }}</a>
+            <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <div>
+                <button type="button" class="btn btn-success">Add comment</button>
+            </div>
+
+            <div>
+                <a href="{% url 'bloghome:homepage' %}">Back to homepage</a>
+            </div>
+
+        </div>
+
+            </div>
+        </div>
+

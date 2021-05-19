@@ -1,0 +1,3 @@
+[submodule "bloghome"]
+	path = bloghome
+	url = https://github.com/olukunleoson/django_task.git
